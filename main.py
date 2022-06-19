@@ -1,0 +1,6 @@
+basic.show_icon(IconNames.HEART)
+basic.pause(1000)
+basic.show_icon(IconNames.DUCK)
+basic.pause(1000)
+basic.show_icon(IconNames.HOUSE)
+basic.pause(1000)
