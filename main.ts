@@ -1,14 +1,15 @@
-let number = 0
-input.onGesture(Gesture.Shake, function on_gesture_shake() {
-    
-    basic.clearScreen()
-    number = randint(0, 10)
-    if (number < 3) {
-        basic.showIcon(IconNames.Yes)
-    } else if (number > 3) {
-        basic.showIcon(IconNames.No)
-    } else {
-        basic.showIcon(IconNames.Diamond)
+let y = 0
+let x = 0
+let i = 0
+while (i < 25) {
+    led.plot(x, y)
+    basic.pause(100)
+    x += 1
+    i += 1
+    if (x > 4) {
+        x = 0
+        y += 1
     }
     
-})
+}
+basic.clearScreen()

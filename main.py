@@ -1,13 +1,12 @@
-number = 0
-
-def on_gesture_shake():
-    global number
-    basic.clear_screen()
-    number = randint(0, 10)
-    if number < 3:
-        basic.show_icon(IconNames.YES)
-    elif number > 3:
-        basic.show_icon(IconNames.NO)
-    else:
-        basic.show_icon(IconNames.DIAMOND)
-input.on_gesture(Gesture.SHAKE, on_gesture_shake)
+y = 0
+x = 0
+i = 0
+while i < 25:
+    led.plot(x, y)
+    basic.pause(100)
+    x += 1
+    i += 1
+    if x > 4:
+        x = 0
+        y += 1
+basic.clear_screen()
